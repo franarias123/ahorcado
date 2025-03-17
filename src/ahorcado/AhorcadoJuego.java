@@ -18,6 +18,7 @@ public class AhorcadoJuego {
         System.out.println("¿Cuántas letras tiene su palabra?");
 	Scanner tampalScan = new Scanner(System.in);
         int tampal = tampalScan.nextInt();
+	tampalScan.nextLine(); // Limpia el buffer después de nextInt()
 	Ahorcado A = new Ahorcado();
 	A.reducirtamanio(tampal);
 
@@ -43,8 +44,7 @@ public class AhorcadoJuego {
         System.out.println("Fin del juego.");
         
         System.out.println("Presione ENTER para terminar...");
-        Scanner scanner = new Scanner(System.in);
-        scanner.nextLine();
+        tampalScan.nextLine(); //espera el ENTER
     }
     
 }
